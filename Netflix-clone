@@ -1,0 +1,435 @@
+// my Netflix clone
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Nepal - Watch TV Shows Online, Watch Movies Online <img src="favicon.png" alt=""></title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+
+  @import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Martel:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+
+.main{
+    background-image: url(backr.png);
+    height: 80vh;
+    background-position: center center;
+    block-size:max(1200px, 100vw) ;
+    background-repeat: no-repeat;
+    height: 75vh;
+    position: relative;
+
+}
+.main .box{
+    height: 75vh;
+    width: 100%;
+    opacity: 0.69;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+nav{
+    max-width: 80vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    align-items: center;
+    height: 63px;
+}
+nav img{
+    color: red;
+    width: 200px;
+    position: relative;
+    z-index: 10;
+}
+nav button{
+    position: relative;
+    z-index: 10;
+}
+.hero{
+   
+    font-family: 'Martel', serif; ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 20px;
+    padding: 30px;
+   
+
+}
+.A{
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    font-family: "poppins";
+    
+}
+/* .hero :second-child{
+    font-weight: 400;
+    font-size: 35px;
+} */
+.B{
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+}
+.C{
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+}
+.separation{
+    height: 7px;
+    background-color: rgb(34, 21, 21);
+    position: relative;
+    z-index: 20;
+}
+.btn{
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn-red{
+    background-color: red;
+    color: white;
+    padding: 3px 24px;
+    color:white;
+    background-color: red;
+    font-size: 20px;
+    border-radius: 7px;
+
+}
+.btn-red-sm{
+    background-color: red;
+    color: white;
+}
+
+.hero-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.main input{
+    padding: 7px 101px 8px 14px;
+    font-weight: 900;
+    font-size: 12px;
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    border: 1px solid rgba(246,238,238,0.5);
+}
+.btn-red-sm{
+    background-color: red;
+    color: white;
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 70vw;
+    color: white;
+
+
+}
+@media screen and (max-width :1300px) 
+{
+  .first{
+    flex-wrap: wrap;
+  }}
+.secImg{
+    position: relative;
+}
+.secImg image{
+    width: 600px;
+    position: relative;
+    z-index: 10;
+    
+}
+.secImg video{
+    width: 600px;
+    position: absolute;
+    top: 51px;
+    right: 0;
+
+}
+section:first > div{
+    display: flex;
+    flex-direction: column;
+    padding: 34px 0;
+}
+section .first > div :nth-child(1){
+    font-size: 48px;
+    font-weight:bolder ;
+
+}
+section .first >div :nth-child(2){
+    font-size: 24px;
+}
+.E{
+    font-size: 48px;
+    font-weight:bolder ;
+}
+.W{
+    font-size: 24px;
+}
+.second img{
+    width: 40vw;
+
+}
+.faq h2{
+    text-align: center;
+    font-size: 48px;
+}
+.faq{
+    background-color: black;
+    color: white;
+    padding: 34px;
+    
+}
+.faqbox{
+    color: white;
+    transition: all 2s ease-out;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#2d2d2d;
+    padding: 24px;
+    max-width: 60vw;
+    margin: 43px auto ;
+    cursor: pointer;
+
+
+}
+.faqbox:hover{
+    background-color: #414141;
+    color: white;
+
+}
+.footer{
+    display: flex;
+
+}
+footer{
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 34px;
+
+}
+footer .question{
+    padding: 34px 0;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1f 1f 1f ;
+    color: white;
+    max-width: 60vw;
+    max-width: auto;
+}
+@media screen and (max-width :1300px) 
+{
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+  }}
+.footer a{
+    font-size:17px ;
+    color: white;
+}
+.footer-item{
+    display: flex;
+    flex-direction: column;
+    gap: 30;
+}
+
+    </style>
+</head>
+<body>
+   <div class="main">
+    <nav>
+    <span>
+        <img width="190" src="Logos-Readability-Netflix-logo-removebg-preview.png" alt="logo"></span>
+        <div>
+            <button class="btn">English</button>
+            <button class="btn-red-sm">Sign in</button>
+
+        </div>
+    <!-- </span> -->
+        <!-- <div class="flex">
+            <button>English</button>
+            <button style="background-color: red;">Sign in</button>
+        </div> -->
+</nav>
+  
+    <div class="box">
+
+
+    </div>
+    <div class="hero">
+        <span class="A">Unlimited movies, TV shows, and more</span>
+        <span class="B">Watch anywhere. Cancel anytime.</span>
+        <span class="C">Ready to watch? Enter your email to create or restart your membership.</span>
+        <div class="hero-buttons">
+            <input type="text" placeholder="Email Address">
+            <button class="btn-red">Get Started &gt;</button>
+        </div>
+        
+
+    </div>
+    <section class="first">
+        <div>
+            <span class="E">Enjoy on your TV</span>
+            <br>
+            <span class="W">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</span>
+
+        </div>
+        <div class="secImg">
+            <img src="tv.png" alt="tvimage">
+            <video src="video-tv-0819.m4v" autoplay loop muted></video>
+        </div>
+    </section>
+    </main>
+
+
+    <div class="separation"></div>
+
+    <section class="first second">
+        <div class="secImg">
+            <img src="sec.png" alt="tvimage">
+            
+        </div>
+        <div>
+            <span class="E">Download your shows to watch offline</span>
+            <br>
+            <span class="W">Save your favorites easily and always have something to watch.</span>
+
+        </div>
+    </section>
+<br>
+<br>
+    <div class="separation"></div>
+
+    <section class="first third">
+        <div>
+            <span class="E">Watch everywhere</span>
+            <br>
+            <span class="W">Watch everywhere</span>
+
+        </div>
+       
+    </section>
+
+    <div class="separation"></div>
+    
+    <section class="first forth">
+        <div>
+            <span class="E">Create profiles for kids</span>
+            <br>
+            <span class="W">
+                Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</span>
+
+        </div>
+        <div class="secImg">
+            <img src="fourth.png" alt="tvimage">
+        
+        </div>
+
+    </section>
+
+
+    <div class="separation"></div>
+   <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faqbox">
+        <span>What is Netflix</span>
+        <svg  width="24" hight="24" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+    
+   </div>
+   <div class="faqbox">
+    <span>How much does Netflix cost?</span>
+    <svg  width="24" hight="24"fill=white  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+
+</div>
+<div class="faqbox">
+    <span>Where can I Watch?</span>
+    <svg  width="24" hight="24" fill="white"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+
+</div>
+<div class="faqbox">
+    <span>How do I cancel?</span>
+    <svg  width="24" hight="24" fill="white"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+
+</div>
+<div class="faqbox">
+    <span>What can I watch on Netflix?</span>
+    <svg  width="24" hight="24" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+
+</div>
+<div class="faqbox">
+    <span>Is Netflix good for kids?</span>
+    <svg  width="24" hight="24" fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+
+</div>
+
+
+
+<div class="separation"></div>
+    
+    <footer>
+        <div class="question">
+        Questions? Contact us.</div>
+<div class="footer">
+        <div class="footer-items">
+
+            <a href="faq">FAQ</a>
+            <a href="faq">Account</a>
+            <a href="faq">Investor Relations</a>
+            <a href="faq">Ways to Watch </a>
+        
+        </div>
+        <div class="footer-items">
+            <a href="faq">Privacy</a>
+            <a href="faq">Corporate Information</a>
+            <a href="faq">Speed Test</a>
+            <a href="faq">Only on Netflix</a>
+
+        </div>
+        <div>
+            <a href="faq">Help Center</a>
+            <a href="faq">
+                Media Center</a>
+            <a href="faq">Jobs</a>
+        
+        </div>
+        <div class="footer-items">
+            <a href="faq">Terms of Use</a>
+            <a href="faq">Cookie Preferences</a>
+            <a href="faq">Contact US</a>
+            <a href="faq">Legal Notices</a>
+            
+        </div>
+        </div>
+    </footer>
+</body>
+</html>
